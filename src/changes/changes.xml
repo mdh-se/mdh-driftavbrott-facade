@@ -7,6 +7,7 @@
     <release version="2.4.1" date="2022-MM-DD">
       <action>Lägg till en Jenkinsfile.</action>
       <action>Konvertera källkoden till UTF-8 encoding.</action>
+      <action>Uppdatera beroenden till commons-io:2.11.0 och junit:4.13.1.</action>
     </release>
     <release version="2.4.0" date="2020-03-27">
       <action>Uppgradera till mdh-parent:36.</action>
