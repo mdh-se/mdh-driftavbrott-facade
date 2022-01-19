@@ -4,6 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="2.4.1" date="2022-MM-DD">
+      <action>Lägg till en Jenkinsfile.</action>
+    </release>
     <release version="2.4.0" date="2020-03-27">
       <action>Uppgradera till mdh-parent:36.</action>
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.4.1.</action>
