@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
   <properties>
-    <title>Ändringar</title>
+    <title>Ã„ndringar</title>
   </properties>
   <body>
     <release version="2.4.1" date="2022-MM-DD">
-      <action>Lägg till en Jenkinsfile.</action>
+      <action>LÃ¤gg till en Jenkinsfile.</action>
+      <action>Konvertera kÃ¤llkoden till UTF-8 encoding.</action>
     </release>
     <release version="2.4.0" date="2020-03-27">
       <action>Uppgradera till mdh-parent:36.</action>
@@ -13,31 +14,31 @@
     </release>
     <release version="2.3.0" date="2019-02-20">
       <action>Uppgradera till mdh-parent:31.</action>
-      <action>Deklarera beroende på javax.xml.ws:jaxws-api.</action>
+      <action>Deklarera beroende pÃ¥ javax.xml.ws:jaxws-api.</action>
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.3.0.</action>
     </release>
     <release version="2.2.0" date="2018-09-25">
-      <action>Hantering för marginal</action>
-      <action>Hanterar statuskoder (204) från driftavbrottstjänsten</action>
+      <action>Hantering fÃ¶r marginal</action>
+      <action>Hanterar statuskoder (204) frÃ¥n driftavbrottstjÃ¤nsten</action>
     </release>
     <release version="2.1.1" date="2018-04-10">
-      <action>Säkerställ att properties-filen kan läsas även i en webapp på Windows.</action>
+      <action>SÃ¤kerstÃ¤ll att properties-filen kan lÃ¤sas Ã¤ven i en webapp pÃ¥ Windows.</action>
     </release>
     <release version="2.1.0" date="2018-03-06">
       <action>Uppdatera till CXF 3.1.14.</action>
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.2.0.</action>
       <action>Uppgradera till mdh-parent:26.</action>
-      <action>För att köra integrationstesterna krävs att man anger URL till en driftavbrottstjänst.</action>
-      <action>Propertyn för URL till driftavbrottstjänsten har bytt namn till se.mdh.driftavbrott.service.url.</action>
+      <action>FÃ¶r att kÃ¶ra integrationstesterna krÃ¤vs att man anger URL till en driftavbrottstjÃ¤nst.</action>
+      <action>Propertyn fÃ¶r URL till driftavbrottstjÃ¤nsten har bytt namn till se.mdh.driftavbrott.service.url.</action>
     </release>
     <release version="2.0.0" date="2017-10-03">
       <action>Uppgradera till JAX-RS 2.0 och CXF 3.1.</action>
     </release>
     <release version="1.0.1" date="2017-10-02">
-      <action>Lägg till ytterligare felhantering.</action>
+      <action>LÃ¤gg till ytterligare felhantering.</action>
     </release>
     <release version="1.0.0" date="2017-09-28">
-      <action>Lägg till en facade för att hämta driftavbrott.</action>
+      <action>LÃ¤gg till en facade fÃ¶r att hÃ¤mta driftavbrott.</action>
     </release>
   </body>
 </document>

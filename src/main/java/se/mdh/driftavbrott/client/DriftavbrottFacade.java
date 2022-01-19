@@ -14,15 +14,15 @@ import org.apache.cxf.jaxrs.client.WebClient;
 import se.mdh.driftavbrott.modell.Driftavbrott;
 
 /**
- * En facade fˆr att kunna h‰mta information om driftavbrott frÂn en central
- * MDH-tj‰nst.
+ * En facade f√∂r att kunna h√§mta information om driftavbrott fr√•n en central
+ * MDH-tj√§nst.
  *
  * @author Dennis Lundberg
  * @version $Id: DriftavbrottFacade.java 49125 2018-02-20 09:15:04Z dlg01 $
  */
 public class DriftavbrottFacade {
   /**
-   * Den log som ska anv‰ndas.
+   * Den log som ska anv√§ndas.
    */
   private static final Log log = LogFactory.getLog(DriftavbrottFacade.class);
   private static final String PROPERTIES_FILE = "se.mdh.driftavbrott.properties";
@@ -36,7 +36,7 @@ public class DriftavbrottFacade {
     try {
       inputStream = getClass().getClassLoader().getResourceAsStream(PROPERTIES_FILE);
       if(inputStream == null) {
-        throw new IOException("Hittade inte properties-filen '" + PROPERTIES_FILE + "' pÂ classpath.");
+        throw new IOException("Hittade inte properties-filen '" + PROPERTIES_FILE + "' p√• classpath.");
       }
       properties = new Properties();
       properties.load(inputStream);
@@ -47,12 +47,12 @@ public class DriftavbrottFacade {
   }
 
   /**
-   * H‰mta ett pÂgÂende driftavbrott fˆr en samling med kanaler.
+   * H√§mta ett p√•g√•ende driftavbrott f√∂r en samling med kanaler.
    *
-   * @param kanaler De kanaler som du ‰r intresserad av
-   * @param system Det system som frÂgar om driftavbrott, dvs ditt system
-   * @return Ett pÂgÂende driftavbrott
-   * @throws WebServiceException Om nÂgot gÂr fel i kommunikationen med web servicen
+   * @param kanaler De kanaler som du √§r intresserad av
+   * @param system Det system som fr√•gar om driftavbrott, dvs ditt system
+   * @return Ett p√•g√•ende driftavbrott
+   * @throws WebServiceException Om n√•got g√•r fel i kommunikationen med web servicen
    */
   public Driftavbrott getPagaendeDriftavbrott(final List<String> kanaler,
                                               final String system)
@@ -61,13 +61,13 @@ public class DriftavbrottFacade {
   }
 
   /**
-   * H‰mta ett pÂgÂende driftavbrott fˆr en samling med kanaler.
+   * H√§mta ett p√•g√•ende driftavbrott f√∂r en samling med kanaler.
    *
-   * @param kanaler De kanaler som du ‰r intresserad av
-   * @param system Det system som frÂgar om driftavbrott, dvs ditt system
-   * @param marginal Marginaler fˆr driftavbrottet i minuter
-   * @return Ett pÂgÂende driftavbrott
-   * @throws WebServiceException Om nÂgot gÂr fel i kommunikationen med web servicen
+   * @param kanaler De kanaler som du √§r intresserad av
+   * @param system Det system som fr√•gar om driftavbrott, dvs ditt system
+   * @param marginal Marginaler f√∂r driftavbrottet i minuter
+   * @return Ett p√•g√•ende driftavbrott
+   * @throws WebServiceException Om n√•got g√•r fel i kommunikationen med web servicen
    */
   public Driftavbrott getPagaendeDriftavbrott(final List<String> kanaler,
                                               final String system,
@@ -81,23 +81,23 @@ public class DriftavbrottFacade {
           .query("system", system)
           .query("marginal", marginal);
 
-//    MÂste acceptera json och text/html fˆr fel som inte tj‰nsten klarar av att returnera i xml-format, t.ex. 400 (text/html) och 404 (json).
+//    M√•ste acceptera json och text/html f√∂r fel som inte tj√§nsten klarar av att returnera i xml-format, t.ex. 400 (text/html) och 404 (json).
       client.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, MediaType.TEXT_HTML);
 
       url = client.getCurrentURI().toString();
 
-      log.debug("Ska h‰mta driftavbrott frÂn: "
+      log.debug("Ska h√§mta driftavbrott fr√•n: "
                     + url);
       return client.get(Driftavbrott.class);
     }
     catch(WebApplicationException wae) {
-      String message = "Det gick inte att h‰mta driftavbrott fˆr kanalerna " + kanaler + " (url = " + url + "). Statuskod " + wae.getResponse().getStatus();
+      String message = "Det gick inte att h√§mta driftavbrott f√∂r kanalerna " + kanaler + " (url = " + url + "). Statuskod " + wae.getResponse().getStatus();
       log.error(message, wae);
       throw new WebServiceException("", wae);
     }
     catch(Throwable t) {
-      // Hantera ok‰nt fel
-      String message = "Det gick inte att h‰mta driftavbrott fˆr kanalerna " + kanaler + " (ok‰nt fel).";
+      // Hantera ok√§nt fel
+      String message = "Det gick inte att h√§mta driftavbrott f√∂r kanalerna " + kanaler + " (ok√§nt fel).";
       log.error(message, t);
       throw new WebServiceException(message, t);
     }

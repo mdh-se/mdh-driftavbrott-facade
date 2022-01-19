@@ -12,14 +12,14 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 /**
- * Tester för DriftavbrottFacade.
+ * Tester fÃ¶r DriftavbrottFacade.
  *
  * @author Dennis Lundberg
  * @version $Id: DriftavbrottFacadeITCase.java 48632 2017-09-28 13:56:27Z dlg01 $
  */
 public class DriftavbrottFacadeITCase {
   /**
-   * Den log som ska användas.
+   * Den log som ska anvÃ¤ndas.
    */
   private static final Log log = LogFactory.getLog(DriftavbrottFacadeITCase.class);
   private static final String KANAL_ALLTID = "alltid";
@@ -28,13 +28,13 @@ public class DriftavbrottFacadeITCase {
 
   private static List<String> kanalerFinns = new ArrayList<>();
   private static List<String> kanalerSaknas = new ArrayList<>();
-  private static List<String> kanalerFinnsMenHarEjPågåendeAvbrott = new ArrayList<>();
+  private static List<String> kanalerFinnsMenHarEjPÃ¥gÃ¥endeAvbrott = new ArrayList<>();
 
   @BeforeClass
   public static void beforeClass() {
     kanalerFinns.add(KANAL_ALLTID);
     kanalerSaknas.add(KANAL_SAKNAS);
-    kanalerFinnsMenHarEjPågåendeAvbrott.add(KANAL_ALDRIG);
+    kanalerFinnsMenHarEjPÃ¥gÃ¥endeAvbrott.add(KANAL_ALDRIG);
   }
 
   @Test
@@ -46,7 +46,7 @@ public class DriftavbrottFacadeITCase {
   }
 
   /**
-   * Testa korrekt nullhantering för en ickeexisterande kanal.
+   * Testa korrekt nullhantering fÃ¶r en ickeexisterande kanal.
    */
   @Test
   public void testGetPagaendeKanalSaknas() throws Exception {
@@ -57,12 +57,12 @@ public class DriftavbrottFacadeITCase {
   }
 
   /**
-   * Testa korrekt nullhantering för en kanal som inte har ett pågående avbrott.
+   * Testa korrekt nullhantering fÃ¶r en kanal som inte har ett pÃ¥gÃ¥ende avbrott.
    */
   @Test
   public void testGetKanalHarEjPagaendeAvbrott() throws Exception {
     DriftavbrottFacade facade = new DriftavbrottFacade();
-    Driftavbrott driftavbrott = facade.getPagaendeDriftavbrott(kanalerFinnsMenHarEjPågåendeAvbrott, "Integrationstest");
+    Driftavbrott driftavbrott = facade.getPagaendeDriftavbrott(kanalerFinnsMenHarEjPÃ¥gÃ¥endeAvbrott, "Integrationstest");
     log.info(driftavbrott);
     assertNull(driftavbrott);
   }
@@ -76,7 +76,7 @@ public class DriftavbrottFacadeITCase {
   }
 
   /**
-   * Testa korrekt nullhantering för en ickeexisterande kanal.
+   * Testa korrekt nullhantering fÃ¶r en ickeexisterande kanal.
    */
   @Test
   public void testGetPagaendeKanalSaknasMedMarginal() throws Exception {
@@ -87,12 +87,12 @@ public class DriftavbrottFacadeITCase {
   }
 
   /**
-   * Testa korrekt nullhantering för en kanal som inte har ett pågående avbrott.
+   * Testa korrekt nullhantering fÃ¶r en kanal som inte har ett pÃ¥gÃ¥ende avbrott.
    */
   @Test
   public void testGetKanalHarEjPagaendeAvbrottMedMarginal() throws Exception {
     DriftavbrottFacade facade = new DriftavbrottFacade();
-    Driftavbrott driftavbrott = facade.getPagaendeDriftavbrott(kanalerFinnsMenHarEjPågåendeAvbrott, "Integrationstest", 15);
+    Driftavbrott driftavbrott = facade.getPagaendeDriftavbrott(kanalerFinnsMenHarEjPÃ¥gÃ¥endeAvbrott, "Integrationstest", 15);
     log.info(driftavbrott);
     assertNull(driftavbrott);
   }
