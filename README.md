@@ -33,3 +33,11 @@ mdh-driftavbrott-service. Till exempel så här:
 ```
 se.mdh.driftavbrott.service.url=http://localhost:3301/mdh-driftavbrott/v1
 ```
+
+## Loggning
+
+Klienten använder Commons Logging som loggnings-API.
+
+Klienten använder Apache CXF för att göra REST-anrop. Loggning från CXF styrs
+till SLF4J, så om konsumerande applikation vill ha loggning från CXF behöver den
+dirigera om loggning från SLF4J till önskad loggningsimplementation.
