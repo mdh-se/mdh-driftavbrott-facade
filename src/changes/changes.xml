@@ -4,12 +4,12 @@
     <title>Ändringar</title>
   </properties>
   <body>
-    <release version="2.5.0" date="2023-MM-DD">
+    <release version="2.5.0" date="2023-08-30">
+      <action issue="INFRA-1620">Byt ut Log4J 1.x som loggningsimplementation.</action>
       <action>Lägg till en Jenkinsfile.</action>
       <action>Konvertera källkoden till UTF-8 encoding.</action>
       <action>Uppdatera beroenden till commons-io:2.11.0, junit:4.13.2 och mdh-driftavbrott-modell:1.5.0.</action>
       <action>Uppgradera till mdh-parent:53.</action>
-      <action issue="INFRA-1620">Byt ut Log4J 1.x som loggningsimplementation.</action>
     </release>
     <release version="2.4.0" date="2020-03-27">
       <action>Uppgradera till mdh-parent:36.</action>
