@@ -63,14 +63,16 @@
       <artifactId>log4j-core</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- Styr logging från Commons Logging API till Log4J 2 -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-jcl</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- Styr om logging från SLF4J API till Log4J 2 -->
     <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-jcl</artifactId>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
