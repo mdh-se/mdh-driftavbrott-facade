@@ -11,6 +11,7 @@
       <action>Byt det exception som kastas av metoderna i facade-klasserna till WebApplicationException.</action>
       <action>Ta bort beroendet på jaxws-api.</action>
       <action>Byt scope till compile (default) för javax.ws.rs-api.</action>
+      <action>Uppdatera beroende till commons-io:2.15.0.</action>
     </release>
     <release version="2.5.2" date="2023-11-02">
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.5.1.</action>
