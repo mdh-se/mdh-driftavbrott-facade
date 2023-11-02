@@ -46,6 +46,16 @@ public class DriftavbrottFacade {
   }
 
   /**
+   * Skapa en ny instans.
+   *
+   * @param properties De properties som ska användas för att konfigurera facaden
+   * @since 3.0.0
+   */
+  public DriftavbrottFacade(final Properties properties) throws IOException {
+    this.properties = properties;
+  }
+
+  /**
    * Hämta ett pågående driftavbrott för en samling med kanaler.
    *
    * @param kanaler De kanaler som du är intresserad av

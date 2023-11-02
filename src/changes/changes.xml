@@ -5,6 +5,7 @@
   </properties>
   <body>
     <release version="3.0.0" date="2023-MM-DD">
+      <action issue="JAVA-62">Lägg till en konstruktor som tar Properties som parameter i varje facade-klass.</action>
       <action>Byt artifactId till mdh-driftavbrott-facade.</action>
       <action>Flytta alla klasser till package se.mdh.driftavbrott.facade.</action>
       <action>Byt det exception som kastas av metoderna i facade-klasserna till WebApplicationException.</action>
