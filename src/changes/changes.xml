@@ -4,6 +4,10 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="2.5.2" date="2023-11-02">
+      <action>Uppdatera beroende till mdh-driftavbrott-modell:1.5.1.</action>
+      <action>Uppdatera till mdh-parent:56.</action>
+    </release>
     <release version="2.5.0" date="2023-08-30">
       <action issue="INFRA-1620">Byt ut Log4J 1.x som loggningsimplementation.</action>
       <action>Lägg till en Jenkinsfile.</action>

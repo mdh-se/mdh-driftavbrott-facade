@@ -5,7 +5,7 @@
   <parent>
     <groupId>se.mdh</groupId>
     <artifactId>mdh-parent</artifactId>
-    <version>53</version>
+    <version>56</version>
     <relativePath>../mdh-parent/pom.xml</relativePath>
   </parent>
 
@@ -78,7 +78,7 @@
     <dependency>
       <groupId>se.mdh.driftavbrott</groupId>
       <artifactId>mdh-driftavbrott-modell</artifactId>
-      <version>1.5.0</version>
+      <version>1.5.1</version>
     </dependency>
   </dependencies>
 
