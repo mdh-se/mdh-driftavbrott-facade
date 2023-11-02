@@ -1,4 +1,4 @@
-package se.mdh.driftavbrott.client;
+package se.mdh.driftavbrott.facade;
 
 import java.util.ArrayList;
 import java.util.List;

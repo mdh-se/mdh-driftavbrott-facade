@@ -4,6 +4,10 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="3.0.0" date="2023-MM-DD">
+      <action>Byt artifactId till mdh-driftavbrott-facade.</action>
+      <action>Flytta alla klasser till package se.mdh.driftavbrott.facade.</action>
+    </release>
     <release version="2.5.2" date="2023-11-02">
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.5.1.</action>
       <action>Uppdatera till mdh-parent:56.</action>

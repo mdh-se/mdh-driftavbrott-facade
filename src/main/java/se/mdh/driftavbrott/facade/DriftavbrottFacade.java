@@ -1,4 +1,4 @@
-package se.mdh.driftavbrott.client;
+package se.mdh.driftavbrott.facade;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +15,7 @@ import se.mdh.driftavbrott.modell.Driftavbrott;
 
 /**
  * En facade för att kunna hämta information om driftavbrott från en central
- * MDH-tjänst.
+ * tjänst.
  *
  * @author Dennis Lundberg
  * @version $Id: DriftavbrottFacade.java 49125 2018-02-20 09:15:04Z dlg01 $

@@ -1,4 +1,4 @@
-# mdh-driftavbrott-ws-client
+# mdh-driftavbrott-facade
 
 En Java-klient som kan kommunicera med mdh-driftavbrott-service. Den här
 komponenten används av mdh-driftavbrott-filter, men är intressant om du vill
