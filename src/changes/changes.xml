@@ -7,6 +7,9 @@
     <release version="3.0.0" date="2023-MM-DD">
       <action>Byt artifactId till mdh-driftavbrott-facade.</action>
       <action>Flytta alla klasser till package se.mdh.driftavbrott.facade.</action>
+      <action>Byt det exception som kastas av metoderna i facade-klasserna till WebApplicationException.</action>
+      <action>Ta bort beroendet på jaxws-api.</action>
+      <action>Byt scope till compile (default) för javax.ws.rs-api.</action>
     </release>
     <release version="2.5.2" date="2023-11-02">
       <action>Uppdatera beroende till mdh-driftavbrott-modell:1.5.1.</action>

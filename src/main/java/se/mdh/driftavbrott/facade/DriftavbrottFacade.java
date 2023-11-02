@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Properties;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
-import javax.xml.ws.WebServiceException;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -52,11 +51,11 @@ public class DriftavbrottFacade {
    * @param kanaler De kanaler som du är intresserad av
    * @param system Det system som frågar om driftavbrott, dvs ditt system
    * @return Ett pågående driftavbrott
-   * @throws WebServiceException Om något går fel i kommunikationen med web servicen
+   * @throws WebApplicationException Om något går fel i kommunikationen med web servicen
    */
   public Driftavbrott getPagaendeDriftavbrott(final List<String> kanaler,
                                               final String system)
-      throws WebServiceException {
+      throws WebApplicationException {
     return getPagaendeDriftavbrott(kanaler, system, 0);
   }
 
@@ -67,12 +66,12 @@ public class DriftavbrottFacade {
    * @param system Det system som frågar om driftavbrott, dvs ditt system
    * @param marginal Marginaler för driftavbrottet i minuter
    * @return Ett pågående driftavbrott
-   * @throws WebServiceException Om något går fel i kommunikationen med web servicen
+   * @throws WebApplicationException Om något går fel i kommunikationen med web servicen
    */
   public Driftavbrott getPagaendeDriftavbrott(final List<String> kanaler,
                                               final String system,
                                               final int marginal)
-      throws WebServiceException {
+      throws WebApplicationException {
     String url = "";
     try {
       WebClient client = WebClient.create(properties.getProperty("se.mdh.driftavbrott.service.url"))
@@ -81,7 +80,7 @@ public class DriftavbrottFacade {
           .query("system", system)
           .query("marginal", marginal);
 
-//    Måste acceptera json och text/html för fel som inte tjänsten klarar av att returnera i xml-format, t.ex. 400 (text/html) och 404 (json).
+      // Måste acceptera json och text/html för fel som inte tjänsten klarar av att returnera i xml-format, t.ex. 400 (text/html) och 404 (json).
       client.accept(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, MediaType.TEXT_HTML);
 
       url = client.getCurrentURI().toString();
@@ -93,13 +92,13 @@ public class DriftavbrottFacade {
     catch(WebApplicationException wae) {
       String message = "Det gick inte att hämta driftavbrott för kanalerna " + kanaler + " (url = " + url + "). Statuskod " + wae.getResponse().getStatus();
       log.error(message, wae);
-      throw new WebServiceException("", wae);
+      throw new WebApplicationException(message, wae);
     }
     catch(Throwable t) {
       // Hantera okänt fel
       String message = "Det gick inte att hämta driftavbrott för kanalerna " + kanaler + " (okänt fel).";
       log.error(message, t);
-      throw new WebServiceException(message, t);
+      throw new WebApplicationException(message, t);
     }
   }
 }
