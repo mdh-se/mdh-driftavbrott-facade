@@ -24,6 +24,12 @@ public class DriftavbrottFacade {
    * Den log som ska användas.
    */
   private static final Log log = LogFactory.getLog(DriftavbrottFacade.class);
+
+  /**
+   * Namnet på den property som ska innehålla en URL till den
+   * driftavbrott-service som ska användas.
+   */
+  public static final String PROPERTY_DRIFTAVBROTT_SERVICE_URL = "se.mdh.driftavbrott.service.url";
   private static final String PROPERTIES_FILE = "se.mdh.driftavbrott.properties";
   private Properties properties;
 
@@ -84,7 +90,7 @@ public class DriftavbrottFacade {
       throws WebApplicationException {
     String url = "";
     try {
-      WebClient client = WebClient.create(properties.getProperty("se.mdh.driftavbrott.service.url"))
+      WebClient client = WebClient.create(properties.getProperty(PROPERTY_DRIFTAVBROTT_SERVICE_URL))
           .path("/driftavbrott/pagaende")
           .query("kanal", kanaler.toArray())
           .query("system", system)
