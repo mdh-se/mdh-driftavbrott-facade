@@ -1,6 +1,6 @@
 # mdh-driftavbrott-facade
 
-En Java-klient som kan kommunicera med mdh-driftavbrott-service. Den här
+En Java-facade som kan kommunicera med mdh-driftavbrott-service. Den här
 komponenten används av mdh-driftavbrott-filter, men är intressant om du vill
 integrera driftavbrott i något annat än en webbapplikation.
 
@@ -18,8 +18,8 @@ Här följer ett exempel på lite Java-kod:
       System.out.println("Hämtade detta driftavbrott:" + driftavbrott);
       // Hantera driftavbrott
     }
-    catch (WebServiceException wse) {
-      log.warn("Det gick inte att hämta information om pågående driftavbrott.", wse);
+    catch (WebApplicationException wae) {
+      log.warn("Det gick inte att hämta information om pågående driftavbrott.", wae);
       // Felhantering
     }
 ```
@@ -36,7 +36,7 @@ se.mdh.driftavbrott.service.url=http://localhost:3301/mdh-driftavbrott/v1
 
 ## Loggning
 
-Klienten använder Commons Logging som loggnings-API.
+Facaden använder Commons Logging som loggnings-API.
 
 Klienten använder Apache CXF för att göra REST-anrop. Loggning från CXF styrs
 till SLF4J, så om konsumerande applikation vill ha loggning från CXF behöver den
