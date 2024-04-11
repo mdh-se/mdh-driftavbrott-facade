@@ -39,8 +39,8 @@
       <artifactId>commons-logging</artifactId>
     </dependency>
     <dependency>
-      <groupId>javax.ws.rs</groupId>
-      <artifactId>javax.ws.rs-api</artifactId>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -71,7 +71,7 @@
     <dependency>
       <groupId>se.mdh.driftavbrott</groupId>
       <artifactId>mdh-driftavbrott-modell</artifactId>
-      <version>1.5.1</version>
+      <version>1.6.0</version>
     </dependency>
   </dependencies>
 
