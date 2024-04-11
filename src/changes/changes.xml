@@ -5,6 +5,9 @@
   </properties>
   <body>
     <release version="3.0.2" date="2024-02-16">
+      <action>Uppgradera till mdh-parent:60.</action>
+    </release>
+    <release version="3.0.2" date="2024-02-16">
       <action>Exponera en konstant i DriftavbrottFacade för namnet på den property som ska innehålla en URL till önskad driftavbrott-service.</action>
     </release>
     <release version="3.0.1" date="2023-11-21">
