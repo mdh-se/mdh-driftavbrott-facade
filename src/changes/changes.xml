@@ -7,7 +7,7 @@
     <release version="3.1.0" date="2024-04-12">
       <action issue="JAVA-68">Ersätt javax-dependencies med motsvarande jakarta-dependencies.</action>
       <action>Uppgradera till mdh-parent:60.</action>
-      <action>Uppdatera beroende till mdh-driftavbrott-modell:1.6.0.</action>
+      <action>Uppdatera beroende till mdh-driftavbrott-modell:1.6.1.</action>
     </release>
     <release version="3.0.2" date="2024-02-16">
       <action>Exponera en konstant i DriftavbrottFacade för namnet på den property som ska innehålla en URL till önskad driftavbrott-service.</action>

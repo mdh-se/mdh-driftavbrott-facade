@@ -71,7 +71,7 @@
     <dependency>
       <groupId>se.mdh.driftavbrott</groupId>
       <artifactId>mdh-driftavbrott-modell</artifactId>
-      <version>1.6.0</version>
+      <version>1.6.1</version>
     </dependency>
   </dependencies>
 
